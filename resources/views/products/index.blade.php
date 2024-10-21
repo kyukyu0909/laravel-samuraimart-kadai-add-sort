@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container pt-2">
     <div class="row">
         <div class="col-md-2">
@@ -79,6 +80,7 @@
                 {{ $products->appends(request()->query())->links() }}
             </div>
         </div>
+        {{ $products->appends(request()->query())->links() }}
     </div>
 </div>
 @endsection

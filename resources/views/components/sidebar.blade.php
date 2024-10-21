@@ -1,3 +1,4 @@
+
 <div>
     @foreach ($major_categories as $major_category)
         <div class="mb-4">
