@@ -5493,6 +5493,7 @@
             },
             "require": {
                 "php": ">=7.2"
+
             },
             "provide": {
                 "ext-uuid": "*"

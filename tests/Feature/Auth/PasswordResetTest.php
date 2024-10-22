@@ -64,7 +64,6 @@ class PasswordResetTest extends TestCase
             ]);
 
             $response->assertSessionHasNoErrors();
-
             return true;
         });
     }
