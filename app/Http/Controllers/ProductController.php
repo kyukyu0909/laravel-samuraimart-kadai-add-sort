@@ -18,7 +18,6 @@ class ProductController extends Controller
     {
          $keyword = $request->keyword;
 
-<<<<<<< HEAD
          $sorts = [
             '新着順' => 'created_at desc',
             '価格が安い順' => 'price asc',
@@ -53,25 +52,6 @@ class ProductController extends Controller
         $major_categories = MajorCategory::all();
 
         return view('products.index', compact('products', 'category', 'major_category', 'categories', 'major_categories', 'total_count', 'keyword', 'sorts', 'sorted'));
-=======
-        if ($request->category !== null) {
-            $products = Product::where('category_id', $request->category)->sortable()->paginate(15);
-            $total_count = Product::where('category_id', $request->category)->count();
-            $category = Category::find($request->category);
-        } elseif ($keyword !== null) {
-            $products = Product::where('name', 'like', "%{$keyword}%")->sortable()->paginate(15);
-            $total_count = $products->total();
-            $category = null;
-        } else {
-            $products = Product::sortable()->paginate(15);
-            $total_count = "";
-            $category = null;
-        }
-        $categories = Category::all();
-        $major_category_names = Category::pluck('major_category_name')->unique();
- 
-        return view('products.index', compact('products', 'category', 'categories', 'major_category_names', 'total_count', 'keyword'));
->>>>>>> a201f7fa0dd35cb12620b986f1ec8bda8cbb1eaf
     }
 
     /**

@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('product_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('product_id')->constrained()->cascadeOnDelete();
+            /*$table->foreignId('user_id')->constrained()->cascadeOnDelete();*/
+            /*$table->foreignId('product_id')->constrained()->cascadeOnDelete();*/
+            $table->index('user_id', 'product_user_user_id_foreign_idx');
+            $table->index('product_id', 'product_user_product_id_foreign_idx');
             $table->timestamps();
         });
     }
