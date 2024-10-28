@@ -1,4 +1,3 @@
-
 <header>
     <nav class="navbar navbar-expand-md navbar-light shadow-sm samuraimart-header-container h-auto">
         <div class="container">

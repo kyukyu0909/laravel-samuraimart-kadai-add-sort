@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
     "content-hash": "0a8f4d8260f9493a260423e17368330a",
     "packages": [
         {
@@ -1740,7 +1739,6 @@
             "time": "2024-08-16T14:57:26+00:00"
         },
         {
-
             "name": "kyslik/column-sortable",
             "version": "6.6.0",
             "source": {
@@ -5493,7 +5491,6 @@
             },
             "require": {
                 "php": ">=7.2"
-
             },
             "provide": {
                 "ext-uuid": "*"
